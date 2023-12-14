@@ -1,0 +1,12 @@
+const { app } = require('./src/utils/app')
+const productsRouter = require('./src/routes/productsRouter')
+const usersRouter = require('./src/routes/usersRouter')
+const sessionRouter = require('./src/routes/sessionRouter')
+const cartsRouter = require('./src/routes/cartsRouter')
+const viewsRouter = require('./src/routes/viewsRouter')
+
+app.use('/api/products', productsRouter)
+app.use('/api/users', usersRouter)
+app.use('/api/sessions', sessionRouter)
+app.use('/api/carts', cartsRouter)
+app.use('/', viewsRouter)
